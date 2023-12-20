@@ -10,8 +10,7 @@ Project about parrallelisation and coding practices such as :
 
 ## Usage
 
-> [!info]
-> Stay inside the base directory
+> **Tip** : Always stay inside the base directory
 
 Run the base python example
 ```bash
