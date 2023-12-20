@@ -2,7 +2,6 @@ import threading
 import time
 
 import numpy as np
-
 from queue_client import QueueClient
 from task import Task
 

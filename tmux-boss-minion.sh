@@ -1,9 +1,9 @@
 #!/bin/bash
 
-COMMAND_1="python src/boss.py 3000"
-COMMAND_2="python src/minion.py"
-COMMAND_3="python src/minion.py"
-COMMAND_4="python src/queue_manager.py"
+COMMAND_1="python tp_multithreading/src/boss.py 3000"
+COMMAND_2="python tp_multithreading/src/minion.py"
+COMMAND_3="python tp_multithreading/src/minion.py"
+COMMAND_4="python tp_multithreading/src/queue_manager.py"
 
 tmux new-session -d -s my_session \; \
     split-window -v \; \
