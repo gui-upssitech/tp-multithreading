@@ -13,6 +13,7 @@ class QueueManager(BaseManager):
         self.register("get_result_queue", callable=lambda: self.result_queue)
 
     def serve(self):
+        print(f"Starting server at {self.address[0]}:{self.address[1]} ...")
         s = self.get_server()
         s.serve_forever()
 

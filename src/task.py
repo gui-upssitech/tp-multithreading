@@ -12,7 +12,7 @@ class Task:
 
         self.a = np.random.rand(size, size)
         self.b = np.random.rand(size)
-        self.x = np.zeros(size, size)
+        self.x = np.zeros((size, size))
 
         self.time = 0
 
@@ -22,5 +22,3 @@ class Task:
         start = perf_counter()
         self.x = np.linalg.solve(self.a, self.b)
         self.time = perf_counter() - start
-
-        return self.x
