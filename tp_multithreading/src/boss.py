@@ -7,8 +7,8 @@ from task import Task
 
 
 class Boss(QueueClient):
-    def __init__(self, url: str, port: int, authkey: str, task_size: int = 10):
-        super().__init__(url, port, authkey)
+    def __init__(self, task_size: int = 10):
+        super().__init__()
         self.task_size = task_size
 
     def read_result_queue(self):
@@ -39,5 +39,5 @@ if __name__ == "__main__":
 
     task_size = int(sys.argv[1]) if len(sys.argv) > 1 else 10
 
-    boss = Boss("localhost", 50000, b"abc123")
+    boss = Boss(task_size=10)
     boss.run()

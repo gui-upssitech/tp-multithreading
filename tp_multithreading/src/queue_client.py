@@ -5,8 +5,8 @@ from task import Task
 
 
 class QueueClient:
-    def __init__(self, url: str, port: int, authkey: str):
-        self.qm = QueueManager(url, port, authkey)
+    def __init__(self):
+        self.qm = QueueManager("localhost", 50000, b"abc123")
         self.qm.connect()
 
         self.qm.register("get_task_queue")
@@ -21,5 +21,5 @@ class QueueClient:
 
 
 if __name__ == "__main__":
-    qc = QueueClient("localhost", 50000, b"abc123")
+    qc = QueueClient()
     print(qc.task_queue)

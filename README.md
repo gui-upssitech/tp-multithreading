@@ -21,3 +21,13 @@ Run tests for the task class
 ```bash
 python3 -m tp_multithreading.tests.test_task
 ```
+
+CMake commands
+```bash
+# configure
+cmake -B build -S .
+# compile
+cmake --build build
+# run
+./build/low_level
+```

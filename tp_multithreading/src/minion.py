@@ -3,8 +3,8 @@ from task import Task
 
 
 class Minion(QueueClient):
-    def __init__(self, url: str, port: int, authkey: str):
-        super().__init__(url, port, authkey)
+    def __init__(self):
+        super().__init__()
 
     def run(self):
         while True:
@@ -20,5 +20,5 @@ class Minion(QueueClient):
 
 
 if __name__ == "__main__":
-    minion = Minion("localhost", 50000, b"abc123")
+    minion = Minion()
     minion.run()
