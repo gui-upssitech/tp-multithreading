@@ -13,7 +13,7 @@ class Task:
 
         self.a = np.random.rand(size, size)
         self.b = np.random.rand(size)
-        self.x = np.zeros((size, size))
+        self.x = np.zeros(size)
 
         self.time = 0
 

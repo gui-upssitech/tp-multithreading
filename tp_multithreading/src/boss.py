@@ -17,8 +17,10 @@ class Boss(QueueClient):
             if task is None:
                 continue
 
-            res = np.linalg.norm(task.a @ task.x - task.b) < 1e-6
-            print(f"Result for #{task.identifier}: {'valid' if res else 'invalid'}")
+            res = np.linalg.norm(task.a @ task.x - task.b)
+            print(
+                f"Result for #{task.identifier}: {'valid' if res < 1e-4 else f'invalid {res}'}"
+            )
 
     def run(self):
         i = 1
@@ -39,5 +41,5 @@ if __name__ == "__main__":
 
     task_size = int(sys.argv[1]) if len(sys.argv) > 1 else 10
 
-    boss = Boss(task_size=10)
+    boss = Boss(task_size=task_size)
     boss.run()

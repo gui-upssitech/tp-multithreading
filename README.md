@@ -17,12 +17,19 @@ Run the base python example
 bash tmux-boss-minion.sh
 ```
 
+Run the extended example (with c++ minion)
+```bash
+cmake -B build -S .
+cmake --build build
+bash tmux-boss-minion-proxy.sh
+```
+
 Run tests for the task class
 ```bash
 python3 -m tp_multithreading.tests.test_task
 ```
 
-CMake commands
+## C++ CMake commands
 ```bash
 # configure
 cmake -B build -S .
